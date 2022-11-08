@@ -1,0 +1,38 @@
+{
+  "name": "frontle-core",
+  "version": "1.0.0",
+  "description": "Frontle Core",
+  "type": "module",
+  "module": "./",
+  "keywords": [
+    "frontle core",
+    "frontle-core",
+    "frontle",
+    "cordova",
+    "browser",
+    "android",
+    "ios",
+    "electron"
+  ],
+  "author": "Artifriends, Inc. <help@artifriends.com>",
+  "contributors": [
+    "Yun HyeongJun <y37653@gmail.com>",
+    "Ohn DongHun <fatihohn@gmail.com>"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Frontle-Foundation/Frontle-Core.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Frontle-Foundation/Frontle-Core/issues"
+  },
+  "homepage": "https://frontle.org/",
+  "files": [
+    "LICENSE",
+    "README.md",
+    "frontle.js",
+    "system/"
+  ],
+  "dependencies": {}
+}
