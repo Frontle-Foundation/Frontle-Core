@@ -67,7 +67,7 @@ export class f_pageLoader {
         .replace(/[^a-zA-Z0-9_]/gi, "")
         .toLowerCase();
 
-      import(`../../../app/${pagePathName}/${pagePathName}.js`).then(
+      import(`../../../../../app/${pagePathName}/${pagePathName}.js`).then(
         (_main) => {
           // reset page
           this.#pageReset();
