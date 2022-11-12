@@ -1,9 +1,9 @@
 {
   "name": "@frontle/frontle-core",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "description": "Frontle Core",
   "type": "module",
-  "module": "./",
+  "exports": "./index.js",
   "keywords": [
     "frontle core",
     "frontle-core",

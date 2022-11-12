@@ -123,4 +123,4 @@ const frontle = {
   },
 };
 
-export default frontle;
+export { frontle };
