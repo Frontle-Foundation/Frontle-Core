@@ -1,6 +1,6 @@
 {
   "name": "@frontle/frontle-core",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "Frontle Core",
   "type": "module",
   "module": "./",
@@ -31,7 +31,7 @@
   "files": [
     "LICENSE",
     "README.md",
-    "frontle.js",
+    "index.js",
     "system/"
   ],
   "dependencies": {}
