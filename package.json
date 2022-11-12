@@ -1,6 +1,6 @@
 {
   "name": "@frontle/frontle-core",
-  "version": "0.0.6",
+  "version": "1.0.0",
   "description": "Frontle Core",
   "type": "module",
   "exports": "./index.js",
