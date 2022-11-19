@@ -108,23 +108,29 @@ export class f_pageLoader {
       else if (changedPageCount < this.#pageCount) this.#popState(state);
     };
   }
-  #pushState(state) {
+  async #pushState(state) {
     if (this.#pageOpening) history.back();
     else {
-      if (this.#forwardListener === null) this.#pageOpen("replace", state);
-      else {
+      if (
+        this.#forwardListener === null ||
+        (await this.#forwardListener()) === true
+      ) {
+        this.#pageOpen("replace", state);
+      } else {
         history.back();
-        this.#forwardListener();
       }
     }
   }
-  #popState(state) {
+  async #popState(state) {
     if (this.#pageOpening) history.forward();
     else {
-      if (this.#backListener === null) this.#pageOpen("replace", state);
-      else {
+      if (
+        this.#backListener === null ||
+        (await this.#backListener()) === true
+      ) {
+        this.#pageOpen("replace", state);
+      } else {
         history.forward();
-        this.#backListener();
       }
     }
   }
