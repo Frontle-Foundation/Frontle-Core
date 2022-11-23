@@ -1,6 +1,6 @@
 {
   "name": "@frontle/frontle-core",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Frontle Core",
   "type": "module",
   "exports": "./index.js",
@@ -16,8 +16,8 @@
   ],
   "author": "Artifriends, Inc. <help@artifriends.com>",
   "contributors": [
-    "Yun HyeongJun <y37653@gmail.com>",
-    "Ohn DongHun <fatihohn@gmail.com>"
+    "Yun Hyeongjun <y37653@gmail.com>",
+    "Ohn Donghun <fatihohn@gmail.com>"
   ],
   "license": "MIT",
   "repository": {
