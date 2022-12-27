@@ -120,6 +120,7 @@ const frontle = {
      * Values ​​that can be set with the command "frontle build --fenv <FRONTLE_ENV>"
      */
     /* #FRONTLE_BUILD_LINE: FRONTLE_ENV */ FRONTLE_ENV: null,
+    defaultPage: "main",
   },
 };
 

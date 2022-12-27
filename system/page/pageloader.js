@@ -1,3 +1,5 @@
+import { frontle } from "../../index.js";
+
 export class f_pageLoader {
   static _instance = null;
   constructor() {
@@ -28,7 +30,7 @@ export class f_pageLoader {
     let state = null;
     if (history.state === null) {
       state = Object.assign(params, {
-        f_p: params.f_p || "main",
+        f_p: params.f_p || frontle.env.defaultPage,
         f_u: true,
         f_c: 0,
       });
