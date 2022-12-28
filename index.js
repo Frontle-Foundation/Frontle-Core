@@ -1,6 +1,13 @@
 import { f_pageLoader } from "./system/page/pageloader.js";
 const frotlePageLoader = new f_pageLoader();
 
+const loadScript = (src) => {
+  let script = document.createElement("script");
+  script.src = src;
+  script.async = false;
+  document.body.append(script);
+};
+
 /**
  * All features of Frontle are provided here
  */
@@ -100,6 +107,11 @@ const frontle = {
      * @param {function} [deviceReadyCallback] - A function that is executed when the device is ready
      */
     start: (deviceReadyCallback = () => {}) => {
+      loadScript(
+        "@/browser_modules/@frontle/frontle-core/system/xhrMiddleware.js"
+      );
+      loadScript("../cordova.js");
+
       let eventName = "deviceready";
       if (String(typeof window.cordova) === "undefined") {
         eventName = "DOMContentLoaded";
