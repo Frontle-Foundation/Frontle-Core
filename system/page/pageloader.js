@@ -65,9 +65,7 @@ export class f_pageLoader {
       this.#setStateEvent();
 
       // get page path name
-      const pagePathName = this.#params.f_p
-        .replace(/[^a-zA-Z0-9_]/gi, "")
-        .toLowerCase();
+      const pagePathName = this.#params.f_p.replace(/[^a-zA-Z0-9_]/gi, "");
 
       import(`../../../../../app/${pagePathName}/${pagePathName}.js`).then(
         (_main) => {
