@@ -133,6 +133,7 @@ const frontle = {
      */
     /* #FRONTLE_BUILD_LINE: FRONTLE_ENV */ FRONTLE_ENV: null,
     defaultPage: "main",
+    /* #FRONTLE_BUILD_LINE: version */ version: "version",
   },
 };
 
