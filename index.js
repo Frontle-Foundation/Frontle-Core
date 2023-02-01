@@ -13,6 +13,9 @@ const loadScript = (paths, callback) => {
   script.onload = () => {
     loadScript(paths, callback);
   };
+  script.onerror = () => {
+    loadScript(paths, callback);
+  };
   document.body.append(script);
 };
 
@@ -116,25 +119,24 @@ const frontle = {
      */
     start: (deviceReadyCallback = () => {}) => {
       document.addEventListener("DOMContentLoaded", async () => {
-        let scriptPaths = [
-          "@/browser_modules/@frontle/frontle-core/system/xhrMiddleware.js",
-        ];
-        if (String(typeof window.cordova) !== "undefined") {
-          scriptPaths.push("../cordova.js");
-        }
+        loadScript(
+          [
+            "@/browser_modules/@frontle/frontle-core/system/xhrMiddleware.js",
+            "../cordova.js",
+          ],
+          () => {
+            const startFrontle = async () => {
+              await deviceReadyCallback();
+              frotlePageLoader.start();
+            };
 
-        loadScript(scriptPaths, () => {
-          const startFrontle = async () => {
-            await deviceReadyCallback();
-            frotlePageLoader.start();
-          };
-
-          if (String(typeof window.cordova) !== "undefined") {
-            document.addEventListener("deviceready", startFrontle);
-          } else {
-            startFrontle();
+            if (String(typeof window.cordova) !== "undefined") {
+              document.addEventListener("deviceready", startFrontle);
+            } else {
+              startFrontle();
+            }
           }
-        });
+        );
       });
     },
   },
